@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larissa Silveira | Terapeuta Especialista em Autocura Emocional Feminina</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (via CDN for simplicity in this standalone clone) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: 'rgb(253 252 248)',
+                            100: 'rgb(245 240 235)',
+                            200: 'rgb(232 222 213)',
+                            300: 'rgb(214 194 176)',
+                            400: 'rgb(197 214 204)',
+                            500: 'rgb(163 190 173)',
+                            800: 'rgb(84 104 92)',
+                            900: 'rgb(99 61 43)',
+                            accent: 'rgb(176 125 98)',
+                            'accent-dark': 'rgb(154 99 72)',
+                        },
+                        stone: {
+                            500: 'rgb(120 113 108)',
+                            600: 'rgb(87 83 78)',
+                            700: 'rgb(68 64 60)',
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Wistia Scripts -->
+    <script src="https://fast.wistia.com/player.js" async></script>
+    <script src="https://fast.wistia.com/embed/ivchhu8nps.js" async type="module"></script>
+    <style>
+        wistia-player[media-id='ivchhu8nps']:not(:defined) {
+            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ivchhu8nps/swatch');
+            display: block;
+            filter: blur(5px);
+            padding-top: 177.78%;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-brand-50 font-sans text-stone-700 antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 px-4 sm:px-6 lg:px-8 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="text-2xl font-serif font-bold transition-colors text-white md:text-brand-900"
+                id="nav-logo">
+                Larissa Silveira
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#hero" class="text-sm font-medium hover:text-brand-accent transition-colors">Início</a>
+                <a href="#identificacao" class="text-sm font-medium hover:text-brand-accent transition-colors">Para
+                    Você</a>
+                <a href="#como-funciona" class="text-sm font-medium hover:text-brand-accent transition-colors">Como
+                    Funciona</a>
+                <a href="#depoimentos"
+                    class="text-sm font-medium hover:text-brand-accent transition-colors">Depoimentos</a>
+                <a href="#sobre" class="text-sm font-medium hover:text-brand-accent transition-colors">Sobre Mim</a>
+                <a href="#hero"
+                    class="bg-brand-accent text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-brand-accent-dark transition-all shadow-md hover:shadow-lg">
+                    1ª Sessão Grátis
+                </a>
+            </div>
+
+            <!-- Mobile Menu Icon (Simple version) -->
+            <div class="md:hidden">
+                <a href="#hero" class="text-brand-accent">
+                    <i data-lucide="message-circle" class="w-6 h-6"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Backgrounds -->
+        <div class="absolute inset-0 z-0">
+            <img src="hero-nova.jpg.jpeg" alt="Larissa Silveira"
+                class="w-full h-full object-cover object-center opacity-20 md:opacity-100 md:hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-50 via-brand-50/95 to-transparent hidden md:block">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Text Content -->
+                <div class="flex-1 text-center md:text-left space-y-8 animate-fade-in-up">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-brand-900 leading-tight">
+                        Liberte-se dos padrões emocionais que controlam sua vida e reconecte-se com quem você realmente
+                        é
+                    </h1>
+                    <p class="text-lg md:text-xl text-stone-600 font-light max-w-2xl mx-auto md:mx-0">
+                        Terapia especializada para mulheres que buscam curar suas feridas emocionais, quebrar ciclos
+                        disfuncionais e viver com equilíbrio e leveza para cumprir o propósito para o qual foram
+                        criadas.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+                        <a href="#video"
+                            class="w-full sm:w-auto bg-brand-accent text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-brand-accent-dark transition-all shadow-xl hover:shadow-2xl flex items-center justify-center gap-2">
+                            Agendar 1ª Sessão Grátis
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image (Desktop) -->
+                <div class="flex-1 relative w-full max-w-md hidden md:block animate-float">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
+                        <img src="hero-nova.jpg.jpeg" alt="Larissa Silveira" class="w-full h-auto">
+                    </div>
+                    <!-- Decorative blobs -->
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-400/20 rounded-full blur-3xl -z-10">
+                    </div>
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-brand-accent/10 rounded-full blur-3xl -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-900 mb-12">Clique abaixo para ouvir</h2>
+            <div class="relative mx-auto" style="width: 100%; max-width: 425px;">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-stone-200 aspect-[9/16]">
+                    <wistia-player media-id="ivchhu8nps" aspect="0.5625"></wistia-player>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Identification Section -->
+    <section id="identificacao" class="py-24 bg-brand-100/30">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-brand-accent font-bold tracking-widest text-sm uppercase">VOCÊ SE IDENTIFICA?</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-900">
+                    Você tem se sentido sobrecarregada e perdida ultimamente?
+                </h2>
+                <p class="text-lg text-stone-600 max-w-2xl mx-auto">
+                    Muitas mulheres carregam um peso emocional silencioso. Talvez você se identifique com:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-brand-200 hover:shadow-md transition-shadow flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-8 h-8 bg-brand-500/10 rounded-full flex items-center justify-center">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-500"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-serif font-bold text-brand-900">Explosões Emocionais</h3>
+                        <p class="text-stone-600 leading-relaxed">Reage no grito, perde o controle e depois é consumida
+                            pela culpa de não ser a mãe que gostaria.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-brand-200 hover:shadow-md transition-shadow flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-8 h-8 bg-brand-500/10 rounded-full flex items-center justify-center">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-500"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-serif font-bold text-brand-900">Relacionamento em Crise</h3>
+                        <p class="text-stone-600 leading-relaxed">Vive conflitos constantes, distância emocional, frieza
+                            ou dependência afetiva no casamento.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-brand-200 hover:shadow-md transition-shadow flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-8 h-8 bg-brand-500/10 rounded-full flex items-center justify-center">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-500"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-serif font-bold text-brand-900">Esgotamento Emocional</h3>
+                        <p class="text-stone-600 leading-relaxed">Ansiedade, tristeza profunda ou depressão. Cansada de
+                            sobreviver no automático, sem perspectiva.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-brand-200 hover:shadow-md transition-shadow flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-8 h-8 bg-brand-500/10 rounded-full flex items-center justify-center">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-500"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-serif font-bold text-brand-900">Perda de Identidade</h3>
+                        <p class="text-stone-600 leading-relaxed">Desconectada de quem você é, com baixa autoestima e
+                            sem clareza sobre seu propósito.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="py-20 bg-brand-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <blockquote class="text-2xl md:text-3xl font-serif italic text-brand-900 leading-relaxed">
+                "Você não precisa carregar esse fardo sozinha. Existe um caminho de cura, ressignificação e reconexão
+                com sua verdadeira identidade."
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-brand-accent font-bold tracking-widest text-sm uppercase">A METODOLOGIA</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-900">Um processo estruturado para sua
+                    transformação emocional</h2>
+                <div class="max-w-3xl mx-auto text-stone-600 space-y-4 mt-6">
+                    <p>O método TEPM não trabalha com sintomas. Trabalhamos na raiz:</p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
+                        <li class="flex items-start gap-2">
+                            <span class="text-brand-accent">→</span> Acessamos memórias emocionais armazenadas desde a
+                            infância
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-brand-accent">→</span> Liberamos cargas reprimidas que mantêm o padrão
+                            ativo
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-brand-accent">→</span> Criamos novos caminhos neurais através da
+                            ressignificação
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-brand-accent">→</span> Reorganizamos o sistema nervoso para respostas
+                            saudáveis
+                        </li>
+                    </ul>
+                    <p class="font-semibold text-brand-900 mt-6">Resultado: Você não apenas entende seus comportamentos.
+                        Você os desativa e cria novos padrões conscientemente.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div
+                    class="flex flex-col items-center text-center p-8 rounded-2xl bg-brand-50 border border-brand-100 hover:border-brand-accent/30 transition-colors">
+                    <div class="mb-6 p-4 bg-white rounded-2xl shadow-sm">
+                        <i data-lucide="brain" class="w-8 h-8 text-brand-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-brand-900 mb-4">Neurociência & Fé</h3>
+                    <p class="text-stone-600 leading-relaxed">Um método baseado em neurociência comportamental,
+                        neurobiologia e princípios cristãos, que vai à raiz emocional.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div
+                    class="flex flex-col items-center text-center p-8 rounded-2xl bg-brand-50 border border-brand-100 hover:border-brand-accent/30 transition-colors">
+                    <div class="mb-6 p-4 bg-white rounded-2xl shadow-sm">
+                        <i data-lucide="heart" class="w-8 h-8 text-brand-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-brand-900 mb-4">Gestão Emocional Profunda</h3>
+                    <p class="text-stone-600 leading-relaxed">Aprenda ferramentas práticas para processar emoções,
+                        desativar gatilhos e criar novos padrões de resposta.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div
+                    class="flex flex-col items-center text-center p-8 rounded-2xl bg-brand-50 border border-brand-100 hover:border-brand-accent/30 transition-colors">
+                    <div class="mb-6 p-4 bg-white rounded-2xl shadow-sm">
+                        <i data-lucide="hand-helping" class="w-8 h-8 text-brand-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-brand-900 mb-4">Reconexão com o Propósito</h3>
+                    <p class="text-stone-600 leading-relaxed">Entenda seu chamado, reconecte-se com sua identidade e
+                        viva alinhada com quem você foi criada para ser.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-24 bg-brand-50 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="flex-1 w-full max-w-md lg:max-w-full relative">
+                    <div class="aspect-[4/5] relative rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="https://heyboss.heeyo.ai/user-assets/WhatsApp Image 2026-01-29 at 12.09.48_bNwcZ6Di.jpeg"
+                            alt="Larissa Silveira" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl hidden md:block">
+                        <p class="text-brand-accent font-serif font-bold text-xl">Larissa Silveira</p>
+                        <p class="text-stone-500 text-sm">Terapeuta Especialista</p>
+                    </div>
+                </div>
+                <div class="flex-1 space-y-8">
+                    <div class="space-y-4">
+                        <span class="text-brand-accent font-bold tracking-widest text-sm uppercase">SOBRE A
+                            ESPECIALISTA</span>
+                        <h2 class="text-4xl font-serif font-bold text-brand-900">Olá, eu sou a Larissa Silveira</h2>
+                    </div>
+                    <div class="space-y-6 text-stone-600 leading-relaxed text-lg">
+                        <p>Sou terapeuta especialista no universo emocional feminino, com base na neurociência
+                            comportamental. Minha missão é guiar mulheres em um processo profundo de transformação
+                            emocional, desativando comportamentos disfuncionais e criando novos caminhos neurais para
+                            uma vida plena e consciente.</p>
+                        <p>Ansiedade, depressão, explosões emocionais – essas não são fraquezas, são respostas
+                            automáticas do cérebro a informações armazenadas no inconsciente desde a infância. Eu vivi
+                            anos reagindo por esses padrões até entender: nosso cérebro pode ser reprogramado. E quando
+                            você muda o padrão neural, você muda sua vida.</p>
+                        <p>O método TEPM trabalha na raiz: acessando memórias emocionais, liberando cargas reprimidas e
+                            reorganizando o sistema nervoso para criar respostas saudáveis. Centenas de mulheres já
+                            experimentaram essa transformação profunda. Porque cura não é sobre apagar o passado – é
+                            sobre ressignificá-lo e escolher novos caminhos.</p>
+                    </div>
+                    <a href="#como-funciona"
+                        class="inline-flex items-center gap-2 bg-brand-accent text-white px-8 py-4 rounded-lg font-bold hover:bg-brand-accent-dark transition-all shadow-lg">
+                        Agendar 1ª Sessão Grátis
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="como-funciona" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-900 mb-4">Como Funciona?</h2>
+                <p class="text-lg text-stone-600">O passo a passo para iniciar sua jornada de autocura</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                <!-- Line -->
+                <div class="hidden md:block absolute top-12 left-1/4 right-1/4 h-0.5 bg-brand-200 -z-10"></div>
+
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center text-center space-y-6">
+                    <div
+                        class="w-20 h-20 bg-brand-accent text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg border-8 border-brand-50">
+                        01</div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-serif font-bold text-brand-900">Agende Grátis</h3>
+                        <p class="text-stone-600 leading-relaxed">Clique no botão e fale diretamente comigo no WhatsApp
+                            para escolher o melhor horário. A primeira sessão é totalmente gratuita.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center text-center space-y-6">
+                    <div
+                        class="w-20 h-20 bg-brand-accent text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg border-8 border-brand-50">
+                        02</div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-serif font-bold text-brand-900">Conecte-se</h3>
+                        <p class="text-stone-600 leading-relaxed">Você receberá um link para nossa videochamada segura.
+                            É um espaço confidencial e acolhedor.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center text-center space-y-6">
+                    <div
+                        class="w-20 h-20 bg-brand-accent text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg border-8 border-brand-50">
+                        03</div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-serif font-bold text-brand-900">Transforme-se</h3>
+                        <p class="text-stone-600 leading-relaxed">Inicie sua jornada de autoconhecimento, cura emocional
+                            e reconexão com seu propósito.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="#depoimentos"
+                    class="inline-flex items-center gap-2 text-brand-accent font-bold hover:text-brand-accent-dark transition-colors border-b-2 border-brand-accent/30 pb-1">
+                    Ver Depoimentos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="depoimentos" class="py-24 bg-brand-100/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-900 mb-4">Depoimentos</h2>
+                <p class="text-lg text-stone-600">O que dizem as mulheres que já passaram por aqui</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-brand-100 flex flex-col justify-between">
+                    <p class="text-stone-600 italic leading-relaxed mb-8">"A Larissa me ajudou a entender que eu não era
+                        uma mãe ruim, eu era uma mãe ferida. Hoje consigo me posicionar sem explodir."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-brand-400 rounded-full flex items-center justify-center text-white font-bold">
+                            M</div>
+                        <div>
+                            <p class="font-bold text-brand-900">M.S.</p>
+                            <span class="text-xs font-bold tracking-widest text-brand-accent uppercase">PACIENTE</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-brand-100 flex flex-col justify-between">
+                    <p class="text-stone-600 italic leading-relaxed mb-8">"Meu casamento estava por um fio. A terapia me
+                        deu clareza para agir com sabedoria e não apenas por emoção. Hoje temos paz."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-brand-400 rounded-full flex items-center justify-center text-white font-bold">
+                            A</div>
+                        <div>
+                            <p class="font-bold text-brand-900">A.L.</p>
+                            <span class="text-xs font-bold tracking-widest text-brand-accent uppercase">PACIENTE</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-brand-100 flex flex-col justify-between">
+                    <p class="text-stone-600 italic leading-relaxed mb-8">"Eu vivia no automático, sem saber quem eu
+                        era. As sessões me ajudaram a reconectar com minha identidade e propósito."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-brand-400 rounded-full flex items-center justify-center text-white font-bold">
+                            R</div>
+                        <div>
+                            <p class="font-bold text-brand-900">R.C.</p>
+                            <span class="text-xs font-bold tracking-widest text-brand-accent uppercase">PACIENTE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-900">Perguntas Frequentes</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <details class="border border-brand-100 rounded-xl overflow-hidden group">
+                    <summary
+                        class="w-full flex items-center justify-between p-6 text-left bg-white hover:bg-brand-50 transition-colors cursor-pointer list-none">
+                        <span class="font-bold text-brand-900">Como funciona a 1ª sessão gratuita?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-brand-accent transition-transform duration-300 group-open:rotate-180"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-stone-600 leading-relaxed border-t border-brand-50">
+                        É um encontro inicial para nos conhecermos, entendermos suas demandas e eu te explicar como a
+                        terapia pode ajudar no seu caso. É totalmente sem custo.
+                    </div>
+                </details>
+
+                <!-- FAQ Item 2 -->
+                <details class="border border-brand-100 rounded-xl overflow-hidden group">
+                    <summary
+                        class="w-full flex items-center justify-between p-6 text-left bg-white hover:bg-brand-50 transition-colors cursor-pointer list-none">
+                        <span class="font-bold text-brand-900">É online?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-brand-accent transition-transform duration-300 group-open:rotate-180"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-stone-600 leading-relaxed border-t border-brand-50">
+                        Sim! Todos os atendimentos são feitos por videochamada segura, no conforto da sua casa.
+                    </div>
+                </details>
+
+                <!-- FAQ Item 3 -->
+                <details class="border border-brand-100 rounded-xl overflow-hidden group">
+                    <summary
+                        class="w-full flex items-center justify-between p-6 text-left bg-white hover:bg-brand-50 transition-colors cursor-pointer list-none">
+                        <span class="font-bold text-brand-900">Aceita plano de saúde?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-brand-accent transition-transform duration-300 group-open:rotate-180"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-stone-600 leading-relaxed border-t border-brand-50">
+                        Não trabalho com convênios, mas posso fornecer recibos para eventual reembolso, dependendo do
+                        seu plano.
+                    </div>
+                </details>
+
+                <!-- FAQ Item 4 -->
+                <details class="border border-brand-100 rounded-xl overflow-hidden group">
+                    <summary
+                        class="w-full flex items-center justify-between p-6 text-left bg-white hover:bg-brand-50 transition-colors cursor-pointer list-none">
+                        <span class="font-bold text-brand-900">Qual a duração da sessão?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-brand-accent transition-transform duration-300 group-open:rotate-180"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-stone-600 leading-relaxed border-t border-brand-50">
+                        Cada sessão tem duração de 50 minutos a 1 hora.
+                    </div>
+                </details>
+
+                <!-- FAQ Item 5 -->
+                <details class="border border-brand-100 rounded-xl overflow-hidden group">
+                    <summary
+                        class="w-full flex items-center justify-between p-6 text-left bg-white hover:bg-brand-50 transition-colors cursor-pointer list-none">
+                        <span class="font-bold text-brand-900">Preciso ser cristã para fazer terapia?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-brand-accent transition-transform duration-300 group-open:rotate-180"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-stone-600 leading-relaxed border-t border-brand-50">
+                        Não é obrigatório, mas minha abordagem integra fé e ciência. Respeito todas as crenças e adapto
+                        conforme sua realidade.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="agendamento" class="py-24 bg-brand-50">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-8">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-brand-900">Agende seu horário agora</h2>
+            <p class="text-xl text-stone-600 font-light">Dê o primeiro passo para o seu equilíbrio emocional. Clique no
+                botão abaixo para falar comigo e agendar sua sessão gratuita.</p>
+            <a href="https://wa.link/nod7i0"
+                class="inline-flex items-center gap-3 bg-brand-accent text-white px-10 py-5 rounded-xl text-xl font-bold hover:bg-brand-accent-dark transition-all shadow-2xl hover:scale-105">
+                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                Agenda Agora
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-900 text-brand-100 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center border-b border-brand-800 pb-16 mb-10">
+                <div class="space-y-6 text-center md:text-left">
+                    <h3 class="text-3xl font-serif font-bold text-white">Comece a cuidar de você hoje mesmo.</h3>
+                    <a href="#agendamento"
+                        class="inline-flex items-center gap-2 bg-white text-brand-900 px-6 py-3 rounded-lg font-bold hover:bg-brand-100 transition-colors">
+                        Agendar 1ª Sessão Grátis
+                    </a>
+                </div>
+                <div class="flex flex-col items-center md:items-end space-y-4">
+                    <a href="mailto:contato@larissasilveira.com.br"
+                        class="flex items-center gap-2 hover:text-white transition-colors">
+                        <i data-lucide="mail" class="w-5 h-5 text-brand-accent"></i>
+                        contato@larissasilveira.com.br
+                    </a>
+                    <a href="https://www.instagram.com/larissasilveirala_terapeuta/"
+                        class="flex items-center gap-2 hover:text-white transition-colors">
+                        <i data-lucide="instagram" class="w-5 h-5 text-brand-accent"></i>
+                        @larissasilveirala_terapeuta
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-brand-300">
+                <p class="font-serif text-xl text-white">Larissa Silveira</p>
+                <p>© 2026 Larissa Silveira | Terapeuta Especialista em Autocura Emocional Feminina</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Icons
+        lucide.createIcons();
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        const navLogo = document.getElementById('nav-logo');
+        const heroSection = document.getElementById('hero');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('bg-transparent', 'py-6');
+                navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'py-3', 'shadow-sm');
+                navLogo.classList.remove('text-white');
+                navLogo.classList.add('text-brand-900');
+            } else {
+                navbar.classList.add('bg-transparent', 'py-6');
+                navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'py-3', 'shadow-sm');
+                // Only reset text color on desktop if we assume hero image is dark-ish or on mobile if header is overlay
+                // The original code had conditional logic based on 'o' (isScrolled) for logo color
+                navLogo.classList.remove('text-brand-900');
+                // On mobile it was 'text-brand-900' always? No, original: o ? "text-brand-900" : "text-white md:text-brand-900"
+                // Actually wait, original was: o ? "text-brand-900" : "text-white md:text-brand-900"
+                // This means initially white on mobile, but brand-900 on desktop? Or vice versa?
+                // "text-white md:text-brand-900" means white on mobile, dark on desktop initially?
+                // Let's stick to the scroll effect logic.
+                if (window.innerWidth >= 768) {
+                    navLogo.classList.add('md:text-brand-900'); // Ensure it stays dark on desktop if that was the design
+                    // Actually, looking at the hero, it has a gradient on desktop "hidden md:block".
+                    // And the image "md:hidden".
+                    // So on desktop, it's a gradient background.
+                }
+                navLogo.classList.add('text-white');
+            }
+        });
+    </script>
+</body>
+
+</html>
