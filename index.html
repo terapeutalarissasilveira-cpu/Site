@@ -78,6 +78,24 @@
             padding-top: 177.78%;
         }
     </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1447172700178614');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1447172700178614&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 
 <body class="min-h-screen bg-brand-50 font-sans text-stone-700 antialiased">
@@ -100,7 +118,7 @@
                 <a href="#depoimentos"
                     class="text-sm font-medium hover:text-brand-accent transition-colors">Depoimentos</a>
                 <a href="#sobre" class="text-sm font-medium hover:text-brand-accent transition-colors">Sobre Mim</a>
-                <a href="#hero"
+                <a href="#hero" onclick="fbq('track', 'Contact');"
                     class="bg-brand-accent text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-brand-accent-dark transition-all shadow-md hover:shadow-lg">
                     1ª Sessão Grátis
                 </a>
@@ -139,7 +157,7 @@
                         criadas.
                     </p>
                     <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
-                        <a href="#video"
+                        <a href="#video" onclick="fbq('track', 'Contact');"
                             class="w-full sm:w-auto bg-brand-accent text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-brand-accent-dark transition-all shadow-xl hover:shadow-2xl flex items-center justify-center gap-2">
                             Agendar 1ª Sessão Grátis
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
@@ -358,7 +376,7 @@
                             experimentaram essa transformação profunda. Porque cura não é sobre apagar o passado – é
                             sobre ressignificá-lo e escolher novos caminhos.</p>
                     </div>
-                    <a href="#como-funciona"
+                    <a href="#como-funciona" onclick="fbq('track', 'Contact');"
                         class="inline-flex items-center gap-2 bg-brand-accent text-white px-8 py-4 rounded-lg font-bold hover:bg-brand-accent-dark transition-all shadow-lg">
                         Agendar 1ª Sessão Grátis
                         <i data-lucide="arrow-right" class="w-5 h-5"></i>
@@ -566,7 +584,7 @@
             <h2 class="text-4xl md:text-5xl font-serif font-bold text-brand-900">Agende seu horário agora</h2>
             <p class="text-xl text-stone-600 font-light">Dê o primeiro passo para o seu equilíbrio emocional. Clique no
                 botão abaixo para falar comigo e agendar sua sessão gratuita.</p>
-            <a href="https://wa.link/nod7i0"
+            <a href="https://w.app/terapeutalarissasilveira" onclick="fbq('track', 'Contact');"
                 class="inline-flex items-center gap-3 bg-brand-accent text-white px-10 py-5 rounded-xl text-xl font-bold hover:bg-brand-accent-dark transition-all shadow-2xl hover:scale-105">
                 <i data-lucide="message-circle" class="w-6 h-6"></i>
                 Agenda Agora
@@ -580,7 +598,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center border-b border-brand-800 pb-16 mb-10">
                 <div class="space-y-6 text-center md:text-left">
                     <h3 class="text-3xl font-serif font-bold text-white">Comece a cuidar de você hoje mesmo.</h3>
-                    <a href="#agendamento"
+                    <a href="#agendamento" onclick="fbq('track', 'Contact');"
                         class="inline-flex items-center gap-2 bg-white text-brand-900 px-6 py-3 rounded-lg font-bold hover:bg-brand-100 transition-colors">
                         Agendar 1ª Sessão Grátis
                     </a>
